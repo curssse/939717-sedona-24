@@ -106,18 +106,24 @@
         <p class="search-option">
           <label for="search-arrival">Дата заезда:</label>
           <input type="text" name="arrival" id="search-arrival" value="24 апреля 2017">
+          <button class="calendar" type="button"><img src="img/calendar.svg" alt="календарь"></button>
         </p>
         <p class="search-option">
           <label for="search-departure">Дата выезда:</label>
           <input type="text" name="departure" id="search-departure" value="4 июля 2017">
+          <button class="calendar" type="button"><img src="img/calendar.svg" alt="календарь"></button>
         </p>
         <p class="search-option">
           <label for="search-adults">Взрослые:</label>
+          <button class="minus" type="button">-</button>
           <input type="text" name="adults" id="search-adults" value="2">
+          <button class="plus" type="button">+</button>
         </p>
         <p class="search-option">
           <label for="search-children">Дети</label>
+          <button class="minus" type="button">-</button>
           <input type="text" name="children" id="search-children" value="0">
+          <button class="plus" type="button">+</button>
         </p>
         <button class="search-button" type="submit">Найти</button>
       </form>
@@ -127,9 +133,9 @@
   <footer class="main-footer">
     <p class="footer-hashtag">#visitSEDONA</p>
     <ul>
-      <li><a class="social-button" href="#">Твиттер</a></li>
-      <li><a class="social-button" href="#">Фейсбук</a></li>
-      <li><a class="social-button" href="#">Ютуб</a></li>
+      <li><a class="social-button" href="#" aria-label="Твиттер"></a></li>
+      <li><a class="social-button" href="#" aria-label="Фейсбук"></a></li>
+      <li><a class="social-button" href="#" aria-label="Ютуб"></a></li>
     </ul>
     <p class="footer-copyright">
       Website by
