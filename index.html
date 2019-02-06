@@ -4,11 +4,13 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-  <header class="main-header">
-
+  <header class="main-header container">
     <nav class="main-navigation">
       <a class="main-header-logo">
         <img src="img/logo.svg" width="140" height="72" alt="Логотип Sedona">
@@ -19,12 +21,10 @@
         <li><a href="#">Карта штата</a></li>
         <li><a href="hotels.html">Гостиницы</a></li>
       </ul>
-
     </nav>
-
   </header>
 
-  <main>
+  <main class="container">
 
     <h1 class="visually-hidden">Город Седона</h1>
 
@@ -34,12 +34,12 @@
 
     <section class="reasons">
       <h2 class="visually-hidden">Преимущества Седоны</h2>
-      <p class="reasons-text">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
-      <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
-      <ul class="reasons-list main-reason">
-        <li class="reasons-item">
+      <p class="reasons-title">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
+      <p class="reasons-text">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+      <ul class="reasons-list">
+        <li class="reasons-item main-reason">
           <h3 class="reasons-item-title">Настоящий городок</h3>
-          <span class="reasons-item-number">№1</span>
+          <p class="reasons-item-number">— №1 —</p>
           <p class="reasons-item-text">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
           <div class="reasons-item-image">
             <img src="img/town.jpg" width="800" height="256" alt="Город Седона">
@@ -63,7 +63,7 @@
         </li>
         <li class="reasons-item main-reason">
           <h3 class="reasons-item-title">Там есть Мост дьявола</h3>
-          <span class="reasons-item-number">№2</span>
+          <p class="reasons-item-number">— №2 —</p>
           <p class="reasons-item-text">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
           <div class="reasons-item-image">
             <img src="img/bridge.jpg" width="800" height="256" alt="Мост дьявола">
@@ -71,17 +71,17 @@
         </li>
         <li class="reasons-item secondary-reason">
           <h3 class="reasons-item-title">Небольшая площадь</h3>
-          <span class="reasons-item-number">№3</span>
+          <p class="reasons-item-number">— №3 —</p>
           <p class="reasons-item-text">Все достопримечательности находятся очень близко</p>
         </li>
         <li class="reasons-item-item secondary-reason">
           <h3 class="reasons-item-title">Красивая дорога</h3>
-          <span class="reasons-item-number">№4</span>
+          <p class="reasons-item-number">— №4 —</p>
           <p class="reasons-item-text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
         </li>
         <li class="reasons-item secondary-reason">
           <h3 class="reasons-item-title">Мало туристов</h3>
-          <span class="reasons-item-number">№5</span>
+          <p class="reasons-item-number">— №5 —</p>
           <p class="reasons-item-text">Большинство едет в гранд каньон и толпится там</p>
         </li>
       </ul>
@@ -89,11 +89,11 @@
 
 
     <div class="hotel-search">
-      <p class="hotel-search-text">Заинтересовались?</p>
-      <p>Укажите предполагаемые даты поездки, <br>
+      <p class="hotel-search-title">Заинтересовались?</p>
+      <p class="hotel-search-text">Укажите предполагаемые даты поездки, <br>
         и мы покажем вам лучшие предложения гостиниц в седоне
       </p>
-      <a class="button" href="#">Поиск гостиницы в Седоне</a>
+      <a class="hotel-button" href="#">Поиск гостиницы в Седоне</a>
     </div>
 
     <div class="location">
@@ -106,12 +106,56 @@
         <p class="search-option">
           <label for="search-arrival">Дата заезда:</label>
           <input type="text" name="arrival" id="search-arrival" value="24 апреля 2017">
-          <button class="calendar" type="button"><img src="img/calendar.svg" alt="календарь"></button>
+          <button class="calendar" type="button">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="21px" height="22px" viewBox="0 0 21 22" enable-background="new 0 0 21 22" xml:space="preserve" role="img"
+              aria-label="Календарь">
+              <g id="calendar_1_">
+                <path d="M19.251,2.025h-2.845V0.648c0-0.381-0.294-0.689-0.656-0.689c-0.363,0-0.656,0.308-0.656,0.689v1.377h-3.938V0.648
+            c0-0.381-0.294-0.689-0.655-0.689c-0.363,0-0.657,0.308-0.657,0.689v1.377H5.906V0.648c0-0.381-0.294-0.689-0.656-0.689
+            c-0.363,0-0.657,0.308-0.657,0.689v1.377H1.75C0.784,2.025,0,2.847,0,3.862v16.302C0,21.179,0.784,22,1.75,22h17.501
+            C20.217,22,21,21.179,21,20.164V3.862C21,2.847,20.217,2.025,19.251,2.025z M19.688,20.164c0,0.253-0.195,0.459-0.437,0.459H1.75
+            c-0.241,0-0.438-0.206-0.438-0.459V3.862c0-0.253,0.196-0.459,0.438-0.459h2.844v1.378c0,0.381,0.294,0.689,0.657,0.689
+            c0.362,0,0.656-0.308,0.656-0.689V3.403h3.938v1.378c0,0.381,0.294,0.689,0.657,0.689c0.361,0,0.655-0.308,0.655-0.689V3.403h3.938
+            v1.378c0,0.381,0.293,0.689,0.656,0.689c0.362,0,0.656-0.308,0.656-0.689V3.403h2.845c0.241,0,0.437,0.206,0.437,0.459V20.164z" />
+                <rect x="4.594" y="8.225" width="2.625" height="2.066" />
+                <rect x="4.594" y="11.668" width="2.625" height="2.067" />
+                <rect x="4.594" y="15.112" width="2.625" height="2.066" />
+                <rect x="9.188" y="15.112" width="2.625" height="2.066" />
+                <rect x="9.188" y="11.668" width="2.625" height="2.067" />
+                <rect x="9.188" y="8.225" width="2.625" height="2.066" />
+                <rect x="13.781" y="15.112" width="2.625" height="2.066" />
+                <rect x="13.781" y="11.668" width="2.625" height="2.067" />
+                <rect x="13.781" y="8.225" width="2.625" height="2.066" />
+              </g>
+            </svg>
+          </button>
         </p>
         <p class="search-option">
           <label for="search-departure">Дата выезда:</label>
           <input type="text" name="departure" id="search-departure" value="4 июля 2017">
-          <button class="calendar" type="button"><img src="img/calendar.svg" alt="календарь"></button>
+          <button class="calendar" type="button">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="21px" height="22px" viewBox="0 0 21 22" enable-background="new 0 0 21 22" xml:space="preserve" role="img"
+              aria-label="Календарь">
+              <g id="calendar_1_">
+                <path d="M19.251,2.025h-2.845V0.648c0-0.381-0.294-0.689-0.656-0.689c-0.363,0-0.656,0.308-0.656,0.689v1.377h-3.938V0.648
+          		c0-0.381-0.294-0.689-0.655-0.689c-0.363,0-0.657,0.308-0.657,0.689v1.377H5.906V0.648c0-0.381-0.294-0.689-0.656-0.689
+          		c-0.363,0-0.657,0.308-0.657,0.689v1.377H1.75C0.784,2.025,0,2.847,0,3.862v16.302C0,21.179,0.784,22,1.75,22h17.501
+          		C20.217,22,21,21.179,21,20.164V3.862C21,2.847,20.217,2.025,19.251,2.025z M19.688,20.164c0,0.253-0.195,0.459-0.437,0.459H1.75
+          		c-0.241,0-0.438-0.206-0.438-0.459V3.862c0-0.253,0.196-0.459,0.438-0.459h2.844v1.378c0,0.381,0.294,0.689,0.657,0.689
+          		c0.362,0,0.656-0.308,0.656-0.689V3.403h3.938v1.378c0,0.381,0.294,0.689,0.657,0.689c0.361,0,0.655-0.308,0.655-0.689V3.403h3.938
+          		v1.378c0,0.381,0.293,0.689,0.656,0.689c0.362,0,0.656-0.308,0.656-0.689V3.403h2.845c0.241,0,0.437,0.206,0.437,0.459V20.164z" />
+                <rect x="4.594" y="8.225" width="2.625" height="2.066" />
+                <rect x="4.594" y="11.668" width="2.625" height="2.067" />
+                <rect x="4.594" y="15.112" width="2.625" height="2.066" />
+                <rect x="9.188" y="15.112" width="2.625" height="2.066" />
+                <rect x="9.188" y="11.668" width="2.625" height="2.067" />
+                <rect x="9.188" y="8.225" width="2.625" height="2.066" />
+                <rect x="13.781" y="15.112" width="2.625" height="2.066" />
+                <rect x="13.781" y="11.668" width="2.625" height="2.067" />
+                <rect x="13.781" y="8.225" width="2.625" height="2.066" />
+              </g>
+            </svg>
+          </button>
         </p>
         <p class="search-option">
           <label for="search-adults">Взрослые:</label>
@@ -120,19 +164,19 @@
           <button class="plus" type="button">+</button>
         </p>
         <p class="search-option">
-          <label for="search-children">Дети</label>
+          <label for="search-children">Дети:</label>
           <button class="minus" type="button">-</button>
           <input type="text" name="children" id="search-children" value="0">
           <button class="plus" type="button">+</button>
         </p>
-        <button class="search-button" type="submit">Найти</button>
+        <button class="find-button" type="submit">Найти</button>
       </form>
     </section>
   </main>
 
-  <footer class="main-footer">
+  <footer class="main-footer container">
     <p class="footer-hashtag">#visitSEDONA</p>
-    <ul>
+    <ul class="footer-contacts">
       <li><a class="social-button" href="#" aria-label="Твиттер"></a></li>
       <li><a class="social-button" href="#" aria-label="Фейсбук"></a></li>
       <li><a class="social-button" href="#" aria-label="Ютуб"></a></li>
