@@ -13,12 +13,14 @@
   <header class="main-header container">
 
     <nav class="main-navigation">
-      <a href="index.html" class="main-header-logo">
-        <img src="img/logo.svg" width="140" height="72" alt="Логотип Sedona">
-      </a>
       <ul class="site-navigation">
         <li><a href="#">Информация</a></li>
         <li><a href="#">Фото и видео</a></li>
+        <li>
+          <a href="index.html" class="main-header-logo">
+            <img src="img/logo.svg" width="140" height="72" alt="Логотип Sedona">
+          </a>
+        </li>
         <li><a href="#">Карта штата</a></li>
         <li><a class="site-navigation-current">Гостиницы</a></li>
       </ul>
@@ -33,66 +35,73 @@
     <section class="filter">
       <h2 class="visually-hidden">Фильтр гостиниц</h2>
       <form action="https://echo.htmlacademy.ru" method="get" oninput="pricemax.value=rangecountmax.value; pricemin.value=rangecountmin.value">
-        <fieldset>
-          <legend>Инфраструктура:</legend>
-          <ul class="filter-list">
-            <li class="filter-option">
-              <input class="visually-hidden filter-checkbox" type="checkbox" name="pool" id="filter-pool" checked>
-              <label for="filter-pool">Бассейн</label>
-            </li>
-            <li class="filter-option">
-              <input class="visually-hidden filter-checkbox" type="checkbox" name="parking" id="filter-parking">
-              <label for="filter-parking">Парковка</label>
-            </li>
-            <li class="filter-option">
-              <input class="visually-hidden filter-checkbox" type="checkbox" name="wi-fi" id="filter-wi-fi">
-              <label for="filter-wi-fi">Wi-Fi</label>
-            </li>
-          </ul>
-        </fieldset>
-        <fieldset>
-          <legend>Тип жилья:</legend>
-          <ul class="filter-list">
-            <li class="filter-option">
-              <input class="visually-hidden filter-checkbox" type="checkbox" name="hotel" id="filter-hotel" checked>
-              <label for="filter-hotel">Гостиница</label>
-            </li>
-            <li class="filter-option">
-              <input class="visually-hidden filter-checkbox" type="checkbox" name="motel" id="filter-motel" checked>
-              <label for="filter-motel">Мотель</label>
-            </li>
-            <li class="filter-option">
-              <input class="visually-hidden filter-checkbox" type="checkbox" name="apartments" id="filter-apartments" checked>
-              <label for="filter-apartments">Апартаменты</label>
-            </li>
-          </ul>
-        </fieldset>
-        <fieldset>
-          <legend>Стоимость в сутки(р):</legend>
-          <label class="visually-hidden" for="filter-range-min">Минимальная цена</label>
-          <output name="pricemin">от 0</output>
-          <input type="range" name="rangecountmin" id="filter-range-min" min="0" max="4000" step="100" value="0">
-          <label class="visually-hidden" for="filter-range-max">Максимальная цена</label>
-          <output name="pricemax">до 3000</output>
-          <input type="range" name="rangecountmax" id="filter-range-max" min="0" max="4000" step="100" value="3000">
-        </fieldset>
-        <button class="filter-button" type="submit">Показать</button>
+        <div class="filter-wrapper">
+          <fieldset>
+            <legend>Инфраструктура:</legend>
+            <ul class="filter-list">
+              <li class="filter-option">
+                <input class="visually-hidden filter-checkbox" type="checkbox" name="pool" id="filter-pool" checked>
+                <label for="filter-pool">Бассейн</label>
+              </li>
+              <li class="filter-option">
+                <input class="visually-hidden filter-checkbox" type="checkbox" name="parking" id="filter-parking">
+                <label for="filter-parking">Парковка</label>
+              </li>
+              <li class="filter-option">
+                <input class="visually-hidden filter-checkbox" type="checkbox" name="wi-fi" id="filter-wi-fi">
+                <label for="filter-wi-fi">Wi-Fi</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend>Тип жилья:</legend>
+            <ul class="filter-list">
+              <li class="filter-option">
+                <input class="visually-hidden filter-checkbox" type="checkbox" name="hotel" id="filter-hotel" checked>
+                <label for="filter-hotel">Гостиница</label>
+              </li>
+              <li class="filter-option">
+                <input class="visually-hidden filter-checkbox" type="checkbox" name="motel" id="filter-motel" checked>
+                <label for="filter-motel">Мотель</label>
+              </li>
+              <li class="filter-option">
+                <input class="visually-hidden filter-checkbox" type="checkbox" name="apartments" id="filter-apartments" checked>
+                <label for="filter-apartments">Апартаменты</label>
+              </li>
+            </ul>
+          </fieldset>
+        </div>
+        <div class="filter-column">
+          <fieldset>
+            <legend>Стоимость в сутки(р):</legend>
+            <label class="visually-hidden" for="filter-range-min">Минимальная цена</label>
+            <output name="pricemin">от 0</output>
+            <input type="range" name="rangecountmin" id="filter-range-min" min="0" max="4000" step="100" value="0">
+            <label class="visually-hidden" for="filter-range-max">Максимальная цена</label>
+            <output name="pricemax">до 3000</output>
+            <input type="range" name="rangecountmax" id="filter-range-max" min="0" max="4000" step="100" value="3000">
+          </fieldset>
+          <button class="filter-button" type="submit">Показать</button>
+        </div>
       </form>
     </section>
 
     <div class="sorting">
-      <p class="sorting-find">Найдено: 3</p>
-      <p class="sorting-selection">Сортировка:</p>
-      <ul class="sorting-list">
-        <li class="sorting-item sorting-item-current"><a>По цене</a></li>
-        <li class="sorting-item"><a href="#">По типу</a></li>
-        <li class="sorting-item"><a href="#">По рейтингу</a></li>
-      </ul>
+      <div class="sorting-wrapper">
+        <p class="sorting-find">Найдено: 3</p>
+        <p class="sorting-selection">Сортировка:</p>
+        <ul class="sorting-list">
+          <li class="sorting-item sorting-item-current"><a>По цене</a></li>
+          <li class="sorting-item"><a href="#">По типу</a></li>
+          <li class="sorting-item"><a href="#">По рейтингу</a></li>
+        </ul>
+      </div>
       <div class="sorting-arrow">
         <a class="arrow" href="#">По возрастанию</a>
         <a class="arrow-current">По убыванию</a>
       </div>
     </div>
+
 
     <section class="catalog">
       <h2 class="visually-hidden">Список гостиниц</h2>
